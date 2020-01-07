@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #questions {
+            width: 800px;
+            margin: auto;
+            height: auto;
+            border-color: black;
+            border-width: thin;
+
+        }
+        #title {
+            text-align: center;
+        }
+        #description {
+            background-color: lightgrey;
+            border-color: black;
+            border-style: solid;
+            border-width: thin;
+            padding: 7px 7px 7px 7px;
+        } 
+        #user-info {
+            display: grid;
+        }
+        .header-input {
+            width: 105px;
+        }
+        ul.radio {
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+            list-style: none;
+        }
+        fieldset.PPV-radio {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 1.25em;
+            padding: .125em;
+        }
+
+        fieldset.radiogroup legend {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            margin-left: 20px;
+            font-size: 100%;
+            color: black;
+        }
+        #comment {
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+            width: 94%;
+            height: 200px;
+            resize: none;
+            border: none;
+            font-size: 16px;
+        }
+        #submit {
+            width: 100px;
+            height: auto;
+            background-color: lightgray;
+        }
+    </style>
+
+    <head>
+    </head>
+    
+    <body>
+        <main id="main">
+            <h1 id="title">UFC Fan Survey</h1>
+            <div id="questions">
+                <p id="description">The aim of this survey is to help improve the overall PPV experience.
+                    You will be asked a series of verying quesions, please answer as honestly as possible. 
+                    We want to provide the best service possible to our users and that hinges greatly 
+                    on the feedback we receive. You will be asked for contact information in order to 
+                    ensure authenticity. All information recieved is kept private, no other users will 
+                    have access or be able to view your answers. Thank you for your coorperation.</p>
+                <form id="survey-form">
+                    <div id="user-info">
+                        <label id="name-label" for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="header-input" placeholder="Enter name here" required>
+                        <label id="email-label" for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="header-input" placeholder="Enter email here" required>
+                        <label id="number-label" for="number">Age:</label>
+                        <input type="number" id="number" min=0 max=120 class="header-input" placeholder="Enter age here"><br>
+                    </div><hr>
+
+                    <label for="dropdown" id="location-selector">Where do you usually watch UFC fights?</label>
+                    <select id="dropdown" name="location-selector">
+                        <option value="home">Home</option>
+                        <option value="friends">Friend's</option>
+                        <option value="bar">Bar</option>
+                        <option value="arena">Arena</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                    <fieldset class="PPV-radio">
+                    <legend>How many UFC PPV's did you purchase this year?</legend>
+                        <ul class="radio">
+                            <li><input id="PPV1" type="radio" name="PPV-amount" value="0"><label for="PPV1">0</label></li>
+                            <li><input id="PPV2" type="radio" name="PPV-amount" value="1-3"><label for="PPV2">1-3</label></li>
+                            <li><input id="PPV3" type="radio" name="PPV-amount" value="4-5"><label for="PPV3">4-5</label></li>
+                            <li><input id="PPV4" type="radio" name="PPV-amount" value="6+"><label for="PPV4">6+</label></li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="PPV-radio">
+                        <legend>How satisfied are you with your PPV purchases?</legend>
+                            <ul class="radio">
+                                <li><input id="satisfaction1" type="radio" name="PPV-satisfaction" value="very satisfied"><label for="satisfaction1">Very Satisfied</label></li>
+                                <li><input id="satisfaction2" type="radio" name="PPV-satisfaction" value="satisfied"><label for="satisfaction2">Satisfied</label></li>
+                                <li><input id="satisfaction3" type="radio" name="PPV-satisfaction" value="unsatisfied"><label for="satisfaction3">Unsatisfied</label></li>
+                                <li><input id="satisfaction4" type="radio" name="PPV-satisfaction" value="very unsatisfied"><label for="satisfaction4">Very Unsatisfied</label></li>
+                            </ul>
+                    </fieldset>
+
+                    <fieldset class="PPV-radio">
+                        <legend>What platform(s) do watch the fights on? Select all that apply.</legend>
+                            <ul class="radio">
+                                <li><input id="platform1" type="checkbox" name="PPV-satisfaction" value="moblie"><label for="platform1">Moblie</label></li>
+                                <li><input id="platform2" type="checkbox" name="PPV-satisfaction" value="computer"><label for="platform2">Computer</label></li>
+                                <li><input id="platform3" type="checkbox" name="PPV-satisfaction" value="tv"><label for="platform3">TV</label></li>
+                                <li><input id="platform4" type="checkbox" name="PPV-satisfaction" value="other"><label for="platform4">Other</label></li>
+                            </ul>
+                    </fieldset>
+
+                    <fieldset class="PPV-radio">
+                        <legend>Additional comments.</legend>
+                            <textarea id="comment"></textarea>
+                    </fieldset>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
